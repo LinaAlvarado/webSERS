@@ -13,6 +13,10 @@
   background-color: var(--green);
 }
 
+.title, p{
+  color: var(--dark-blue);
+}
+
 /* NAVBAR */
 .navbar-burger {
   color: var(--dark-blue);
@@ -63,7 +67,7 @@
   padding: 20px; 
 }
 
-.main-title {
+.main-title, .main-content p {
   color: var(--beige);
 }
 
@@ -90,14 +94,18 @@
 
 /* CURSES */
 
-.package-container {
-  background-color: #f7ece1;
+.structure {
   color: var(--dark-blue);
   padding: 20px;
   border-radius: 10px;
-  border: 2px solid #ec6428;
-  position: relative; 
+  position: relative;  
 }
+
+.package-container {
+  background-color: #f7ece1;
+  border: 2px solid #ec6428;
+}
+
 
 .top-image {
   position: absolute;
@@ -118,7 +126,7 @@
 }
 
 .course-item {
-  background-color: #ec632809; 
+  background-color: #222d5b09; 
   border-radius: 5px;
   padding: 10px;
   display: flex;
@@ -136,7 +144,8 @@
 
 .testimony-container{
   background: linear-gradient(90deg, #46BCC6 0%, #B2CF43 100%);
-  height:200px;
+  height:auto;
+
 }
 
 .testimony-container h2{
@@ -180,4 +189,44 @@
 
 .social-container a:hover{
   font-weight: bolder;
+}
+
+/* INTENSIVE CONTAINER */
+
+.intensive-container{
+  background-color: #b3cf4338;
+  border: 2px solid #b2cf43;
+}
+
+/* SSO CONTAINER */
+.sso-container{
+  background: linear-gradient(90deg, #46BCC6 0%, #B2CF43 100%);
+  color: var(--dark-blue);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.sso-header{
+  display: flex;
+  align-items: center;
+}
+
+.sso-header img{
+  width: 80px;
+}
+
+.columns-container{
+  display: flex;
+  gap: 10px;
+}
+
+.div-column{
+  margin: 18px;
+  padding: 26px;
+  background-color: #f2eee325;
+  border-radius: 10px;
+}
+
+li{
+  list-style:disc;
 }
