@@ -106,7 +106,6 @@
   border: 2px solid #ec6428;
 }
 
-
 .top-image {
   position: absolute;
   top: -35px; 
@@ -229,4 +228,46 @@
 
 li{
   list-style:disc;
+}
+
+/* PLUS SERVICES CONTAINER */
+
+.plus-services-container{
+  background-color: #fdc41b18;
+  border: 2px solid var(--yellow);
+}
+
+.plus-items{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 8px;
+}
+
+.plus-items p{
+  background-color:#fdc41b69;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.plus-footer{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.span-promo{
+background-color: var(--yellow);
+padding: 5px;
+border-radius: 15px;
+font-weight: bolder;
+}
+
+.link-contact{
+  color: var(--dark-blue);
+  font-weight: bolder;
+}
+
+.link-contact:hover{
+  text-decoration: underline;
 }
