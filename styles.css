@@ -174,13 +174,15 @@ p {
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  padding: 16px;
+  padding-top: 1rem;
+  margin:  1rem 3rem;
+
 }
 
 .cards-container {
   display: flex;
   justify-content: space-between;
-  margin: 3rem;
+   margin: 1rem  3rem; 
 }
 
 .cardUser {
@@ -502,19 +504,8 @@ footer p {
 .action-container img{
   width: 70%; 
 }
+
 /* FOOTER */
-footer {
-  background-color: var(--dark-blue);
-}
-
-footer p {
-  color: var(--beige);
-}
-
-.bolder {
-  font-weight: bolder;
-}
-
 .footer-container {
   flex-direction: column;
   gap: 10px;
