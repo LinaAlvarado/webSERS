@@ -401,7 +401,6 @@ footer p {
   }
 
   .service-container {
-    background-color: var(--beige);
     border-radius: 12px;
     height: auto;
     margin: 10px;
@@ -510,5 +509,43 @@ footer p {
   flex-direction: column;
   gap: 10px;
   align-items: flex-start;
+}
+}
+
+
+@media (min-width: 600px) and (max-width: 1040px){
+body{
+  background-color: #b3cf4338;
+
+}
+.main-content {
+  width: 80%;
+}
+
+.service-container {
+  border-radius: 12px;
+  height: auto;
+  padding: 10px; 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+  /* GIFT CONTAINER */
+  .gift-container div {
+    width: 50%;
+  }
+  .gift-container img {
+    position: static;
+    width: 40%;
+  }
+
+/* CALL TO ACTION */
+.action-container div {
+ width: 50%;  
+   text-align: center;
+}
+
+.action-container img{
+  width: 50%; 
 }
 }
