@@ -172,12 +172,15 @@ p {
 
 .text-img-container {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  align-items: baseline;
+  padding: 16px;
 }
 
 .cards-container {
   display: flex;
   justify-content: space-between;
+  margin: 3rem;
 }
 
 .cardUser {
@@ -223,6 +226,7 @@ p {
   color: var(--dark-blue);
   border-radius: 10px;
   padding: 20px;
+  margin: 3rem;
 }
 
 .sso-header {
@@ -384,6 +388,10 @@ footer p {
 
 /* RESPONSIVE CEL */
 @media only screen and (max-width: 600px) {
+  body{
+  overflow: hidden;
+  }
+
   .main-content {
     width: 100%;
     align-items: flex-start;
@@ -421,9 +429,13 @@ footer p {
   .structure {
     margin: 50px 0px;
     padding: 20px;
-    border-radius:0px;
+    border-radius: 0px;
     position: relative;
     width: 100%;
+  }
+
+  .package-container {
+    border: none;
   }
 
   .course-list {
@@ -432,11 +444,53 @@ footer p {
     width: 100%;
   }
 
-  .sso-container{
-    display: none;
+  .cards-container {
+    flex-direction: column;
+    gap: 5px;
+    margin: 16px;
   }
 
-  footer{
+  .cardUser {
+    width: 100%;
+  }
+  .intensive-container {
+    border: none;
+  }
+  .sso-container {
+    margin: 16px;
+  }
+
+  .columns-container {
+    flex-direction: column;
+  }
+
+  .plus-services-container {
+    border: none;
+  }
+
+  /* GIFT CONTAINER */
+.gift-container {
+  background: linear-gradient(90deg, #222d5b 0%, #010a2f 100%);
+  display: flex;
+  position: relative;
+}
+
+.gift-container div {
+  margin: 3rem;
+  width: 100%;
+}
+
+.gift-container img {
+  width: 80%;
+  position: absolute;
+  
+  right: 0px;
+  top: 260px;
+}
+
+
+
+  footer {
     display: none;
   }
 }
