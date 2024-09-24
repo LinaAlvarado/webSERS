@@ -1,7 +1,14 @@
+@use "./variable" as var;
 @mixin grid-layout($columns, $gap: 10px) {
   display: grid;
   grid-template-columns: repeat($columns, 1fr);
   gap: $gap;
+}
+
+@mixin flex-center($direction: row, $align-item:center) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align-item;
 }
 
 @mixin button-style($bg-color, $text-color) {
@@ -13,3 +20,14 @@
   background-color: $bg-color;
   border: 2px solid $border-color;
 }
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == small {
+    @media (min-width: var.$breakpoint-small) { @content; }
+  } @else if $breakpoint == medium {
+    @media (min-width: var.$breakpoint-medium) { @content; }
+  } @else if $breakpoint == large {
+    @media (min-width: var.$breakpoint-large) { @content; }
+  } @else if $breakpoint == extra-large {
+    @media (min-width: var.$breakpoint-extra-large) { @content; }
+}}

@@ -1,5 +1,5 @@
 @use "../abstract/variable" as var;
-
+@use "../abstract/mixins" as mixins;
 // FOOTER 
 footer {
     background-color: var.$dark-blue;
@@ -13,6 +13,12 @@ footer {
       justify-content: space-between;
       text-align: center;
       gap: 16px;
+
+      @include mixins.respond-to(medium) {
+        @include mixins.flex-center(row, center);
+        text-align: left;
+        
+       }
     }
   
     p {

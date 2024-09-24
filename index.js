@@ -1,4 +1,4 @@
-console.log('hola')
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // Get all "navbar-burger" elements
