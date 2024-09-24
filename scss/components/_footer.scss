@@ -1,0 +1,49 @@
+@use "../abstract/variable" as var;
+
+// FOOTER 
+footer {
+    background-color: var.$dark-blue;
+  
+    .footer-container {
+      margin: 3rem;
+      padding-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      gap: 16px;
+    }
+  
+    p {
+      color: var.$beige;
+    }
+    
+    .bolder {
+      font-weight: bolder;
+    }
+  
+    .logo-footer {
+      width: 80px;
+    }
+  
+    .contact-container {
+      display: flex;
+      gap: 2rem;
+  
+      .link-footer {
+        color: var.$green;
+        text-decoration: underline;
+  
+        &:hover {
+          font-weight: 500;
+        }
+      }
+    }
+    .footer-bottom {
+      background-color: #010a2f;
+      text-align: center;
+      color: var.$beige;
+    }
+  }
+    

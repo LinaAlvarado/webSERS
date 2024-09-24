@@ -6,7 +6,7 @@
   --blue-light: #46bbc683;
   --orange: #ec6428;
   --beige: #f2eee3;
-  --grey: #f3f3f3;
+  --grey: ;
 }
 
 .is-primary {
@@ -514,10 +514,6 @@ footer p {
 
 
 @media (min-width: 600px) and (max-width: 1040px){
-body{
-  background-color: #b3cf4338;
-
-}
 .main-content {
   width: 80%;
 }

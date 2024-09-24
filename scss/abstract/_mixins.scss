@@ -1,0 +1,15 @@
+@mixin grid-layout($columns, $gap: 10px) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+@mixin button-style($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+@mixin card-style($bg-color, $border-color){
+  background-color: $bg-color;
+  border: 2px solid $border-color;
+}
