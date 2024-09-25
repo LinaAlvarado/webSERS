@@ -1,60 +1,192 @@
 @use "../abstract/mixins" as mixins;
 @use "../abstract/variable" as var;
 
-.about-container{
-    margin: 16px;
-    @include mixins.flex-center(column);
-    gap: 16px;
+// .about-container{
+//     margin: 16px;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     gap: 16px;
 
-    h2{
-        margin-top: 2rem;
-        text-align: center;
-    }
-}
+//     h2{
+//         margin-top: 2rem;
+//         text-align: center;
+//     }
+// }
 
-.logos-container{
-    background-color: var.$beige;
-    border-radius: 50px;
-    border: 2px solid var.$blue;
+// .logos-container{
+//     background-color: var.$beige;
+//     border-radius: 50px;
+//     border: 2px solid var.$blue;
+//     display: flex;
+//     align-items:center;
+//     justify-content: space-around;
+//     width: 200px;
+//     margin: 0 auto;
+//     p{
+//         font-size: 2rem;
+//         font-weight: bolder;
+//     }
+//     img{
+//         width: 30%;
+//         margin: 5px;
+//     }
+// }
+
+// .card-info{
+//     background-color: var.$beige;
+//     position: relative;
+//     padding: 20px;
+//     border-radius: 10px;
+//     overflow: hidden;
+//     width: 90%;
+//     &::after {
+//         content: '';
+//         position: absolute;
+//         left: 0;
+//         right: 0;
+//         bottom: 0;
+//         height: 2px;
+//         background: var.$gradient-bg
+//       }
+//     div{
+//         @include mixins.flex-center();
+//         gap: 10px;
+//         margin-bottom: 10px;
+//     }
+
+//     a{
+//         font-weight: bolder;
+//         text-decoration: underline;
+//     }
+
+// }
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+
+  @include mixins.respond-to(large) {
+   margin: 5rem;
+  }
+
+  main {
+    width: 100%;
+    padding: 1rem;
     display: flex;
-    align-items:center;
-    justify-content: space-around;
-    width: 200px;
-    margin: 0 auto;
-    p{
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+
+    @include mixins.respond-to(large) {
+      background: var.$gradient-bg;
+      position: relative;
+
+      align-items: flex-start;
+      padding: 2rem;
+    }
+
+    .logos-container {
+      background-color: var.$beige;
+      border-radius: 50px;
+      border: 2px solid var.$blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 5px;
+      width: 200px;
+
+      @include mixins.respond-to(large) {
+        position: absolute;
+        top: -35px;
+        left: 10px;
+      }
+      p {
         font-size: 2rem;
         font-weight: bolder;
-    }
-    img{
-        width: 30%;
-        margin: 5px;
-    }
-}
-
-.card-info{
-    background-color: var.$beige;
-    position: relative;
-    padding: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    &::after {
-        content: '';
-        position: absolute; 
-        left: 0;
-        right: 0;
-        bottom: 0; 
-        height: 2px; 
-        background: var.$gradient-bg
       }
-    div{
-        @include mixins.flex-center();
-        gap: 10px;
-        margin-bottom: 10px;
+      img {
+        max-width: 60px;
+        height: auto;
+      }
     }
 
-    a{
-        font-weight: bolder;
-        text-decoration: underline;
+    h2{
+        @include mixins.respond-to(large) {
+         margin-top:2rem ;
+          } 
     }
-    
+  }
+
+  // Para los articles (cards), los colocamos uno al lado del otro con flex
+  .card-wrapper {
+    display: flex;
+    justify-content: space-between; // Para que las cards queden separadas
+    gap: 2rem; // Espacio entre las cards
+  }
+
+  .card-info {
+    flex: 1; // Cada card ocupará el mismo espacio
+    background-color: var.$beige;
+    padding: 2rem;
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background: var.$gradient-bg;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      img {
+        width: 50px;
+        height: auto;
+      }
+
+      h6 {
+        font-size: 1.25rem;
+        margin: 0;
+      }
+    }
+
+    p {
+      margin-top: 1rem;
+      // text-align: center;
+
+      .link-footer {
+        color: var.$blue;
+        font-weight: bolder;
+        text-decoration: none;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    // En pantallas pequeñas, los articles se apilan
+    .card-wrapper {
+      flex-direction: column;
+    }
+  }
 }
