@@ -36,14 +36,14 @@ footer {
     .contact-container {
       display: flex;
       gap: 2rem;
-  
-      .link-footer {
-        color: var.$green;
-        text-decoration: underline;
-  
-        &:hover {
-          font-weight: 500;
-        }
+    }
+    
+    .link-footer {
+      color: var.$green;
+      text-decoration: underline;
+
+      &:hover {
+        font-weight: 500;
       }
     }
     .footer-bottom {

@@ -468,6 +468,65 @@ a {
   }
 }
 
+.about-container {
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.about-container h2 {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.logos-container {
+  background-color: #f2eee3;
+  border-radius: 50px;
+  border: 2px solid #46bcc6;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 200px;
+  margin: 0 auto;
+}
+.logos-container p {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.logos-container img {
+  width: 30%;
+  margin: 5px;
+}
+
+.card-info {
+  background-color: #f2eee3;
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card-info::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #46bcc6 0%, #b2cf43 100%);
+}
+.card-info div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.card-info a {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
 footer {
   background-color: #222d5b;
 }
@@ -502,11 +561,11 @@ footer .contact-container {
   display: flex;
   gap: 2rem;
 }
-footer .contact-container .link-footer {
+footer .link-footer {
   color: #b2cf43;
   text-decoration: underline;
 }
-footer .contact-container .link-footer:hover {
+footer .link-footer:hover {
   font-weight: 500;
 }
 footer .footer-bottom {
