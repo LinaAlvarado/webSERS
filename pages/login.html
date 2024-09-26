@@ -13,12 +13,11 @@
     <title>SE&RS Educa</title>
   </head>
   <body>
-    
     <div class="login-container">
       <img src="../assets/Logo/LOGO-AZUL.png" alt="" />
       <section class="login-form">
         <div class="login-header">
-          <img src="../assets/icon-doctor.svg" alt="Ingreso de credenciales" />
+          <!-- <img src="../assets/icon-doctor.svg" alt="Ingreso de credenciales" /> -->
           <div>
             <h2 class="title is-4">Iniciar Sesión</h2>
             <!-- <p>Ingresa tus credenciales</p> -->
@@ -28,22 +27,26 @@
         <form>
           <div class="field">
             <label class="label" for="username">Usuario</label>
-            <input
-              class="input"
-              type="text"
-              name="username"
-              placeholder="Ingresa tu usuario"
-            />
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                name="username"
+                placeholder="Ingresa tu usuario"
+              />
+            </div>
           </div>
 
           <div class="field">
             <label class="label" for="password">Contraseña</label>
-            <input
-              class="input"
-              type="password"
-              name="password"
-              placeholder="Ingresa tu contraseña"
-            />
+            <div class="control">
+              <input
+                class="input"
+                type="password"
+                name="password"
+                placeholder="Ingresa tu contraseña"
+              />
+            </div>
           </div>
 
           <button class="button is-primary is-fullwidth" type="submit">
