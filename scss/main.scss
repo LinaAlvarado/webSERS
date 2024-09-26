@@ -3,5 +3,7 @@
 
 @use "./pagesScss/home";
 @use "./pagesScss/aboutUs";
+@use "./pagesScss/login";
 
-@use "./components/footer"
+@use "./components/footer";
+@use "./components/form"

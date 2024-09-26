@@ -1,66 +1,6 @@
 @use "../abstract/mixins" as mixins;
 @use "../abstract/variable" as var;
 
-// .about-container{
-//     margin: 16px;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     gap: 16px;
-
-//     h2{
-//         margin-top: 2rem;
-//         text-align: center;
-//     }
-// }
-
-// .logos-container{
-//     background-color: var.$beige;
-//     border-radius: 50px;
-//     border: 2px solid var.$blue;
-//     display: flex;
-//     align-items:center;
-//     justify-content: space-around;
-//     width: 200px;
-//     margin: 0 auto;
-//     p{
-//         font-size: 2rem;
-//         font-weight: bolder;
-//     }
-//     img{
-//         width: 30%;
-//         margin: 5px;
-//     }
-// }
-
-// .card-info{
-//     background-color: var.$beige;
-//     position: relative;
-//     padding: 20px;
-//     border-radius: 10px;
-//     overflow: hidden;
-//     width: 90%;
-//     &::after {
-//         content: '';
-//         position: absolute;
-//         left: 0;
-//         right: 0;
-//         bottom: 0;
-//         height: 2px;
-//         background: var.$gradient-bg
-//       }
-//     div{
-//         @include mixins.flex-center();
-//         gap: 10px;
-//         margin-bottom: 10px;
-//     }
-
-//     a{
-//         font-weight: bolder;
-//         text-decoration: underline;
-//     }
-
-// }
 
 .about-container {
   display: flex;
@@ -122,18 +62,17 @@
     }
   }
 
-  // Para los articles (cards), los colocamos uno al lado del otro con flex
+  
   .card-wrapper {
     display: flex;
-    justify-content: space-between; // Para que las cards queden separadas
-    gap: 2rem; // Espacio entre las cards
+    justify-content: space-between; 
+    gap: 2rem; 
   }
 
   .card-info {
-    flex: 1; // Cada card ocupará el mismo espacio
+    flex: 1; 
     background-color: var.$beige;
     padding: 2rem;
-    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 
     display: flex;
@@ -172,7 +111,6 @@
 
     p {
       margin-top: 1rem;
-      // text-align: center;
 
       .link-footer {
         color: var.$blue;
@@ -184,7 +122,6 @@
   }
 
   @media (max-width: 768px) {
-    // En pantallas pequeñas, los articles se apilan
     .card-wrapper {
       flex-direction: column;
     }

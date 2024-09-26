@@ -9,10 +9,12 @@ $mediumYellow: #fdc41b69;
 $orange: #ec6428;
 $lightOrange: #f7ece1;
 $beige: #f2eee3;
+$lightBeige:#FDFAF1;
 $grey: #f3f3f3;
 
-$gradient-bg: linear-gradient(90deg, #46bcc6 0%, #b2cf43 100%);
-$gradient-bg-blue: linear-gradient(90deg, #222d5b 0%, #010a2f 100%);
+$gradient-blue-light: linear-gradient(90deg, $blue 27.83%, #8BD0D2 100%);
+$gradient-bg: linear-gradient(90deg, $blue 0%, $green 100%);
+$gradient-bg-blue: linear-gradient(90deg, $dark-blue 0%, #010a2f 100%);
 
 
 $breakpoint-small: 600px;   // Móviles

@@ -581,6 +581,38 @@ a {
   }
 }
 
+body {
+  background: linear-gradient(180deg, #D1FEFF 0%, #F2EEE3 100%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100vh;
+}
+
+.label {
+  color: #222d5b;
+}
+
+.input {
+  background-color: #FDFAF1;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.login-form {
+  width: 90%;
+  border-radius: 10px;
+}
+.login-form p {
+  font-size: 14px;
+}
+
 footer {
   background-color: #222d5b;
 }
