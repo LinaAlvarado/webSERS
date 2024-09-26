@@ -1,9 +1,10 @@
-@use "./abstract/variable";
-@use "./abstract/mixins";
+@import "./abstract/variable";
+@import "./abstract/mixins";
 
-@use "./pagesScss/home";
-@use "./pagesScss/aboutUs";
-@use "./pagesScss/login";
+@import "./pagesScss/home";
+@import "./pagesScss/aboutUs";
+@import "./pagesScss/login";
+@import "./pagesScss/register";
 
-@use "./components/footer";
-@use "./components/form"
+@import "./components/footer";
+@import "./components/form";

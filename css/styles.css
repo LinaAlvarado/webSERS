@@ -5,7 +5,7 @@
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body,
@@ -593,15 +593,24 @@ a {
   width: 100%;
   height: 100vh;
 }
+.login-container .link-to a {
+  text-decoration: underline;
+  font-weight: bolder;
+}
 
 .login-form {
   width: 90%;
   height: auto;
   margin: 16px;
-  padding: 20px;
+  padding: 30px 20px;
   border-radius: 10px;
   background: #f2eee3;
   box-shadow: 0px 9px 27.9px 3px rgba(0, 0, 0, 0.09);
+}
+@media (min-width: 1000px) {
+  .login-form {
+    width: 50%;
+  }
 }
 .login-form form {
   display: flex;
@@ -610,19 +619,36 @@ a {
   margin-top: 18px;
   gap: 18px;
 }
-.label {
+.login-form form .label {
   color: #222d5b;
 }
-
-.input {
+.login-form form .input, .login-form form select {
   background-color: #FDFAF1;
 }
-.input::placeholder {
-  color: #222d5b;
+.login-form form .input::placeholder, .login-form form select::placeholder {
+  font-size: 14px;
+  color: #979ba7;
 }
 
-.login-form p {
-  font-size: 14px;
+.register-container {
+  background: linear-gradient(90deg, #46bcc6 27.83%, #8BD0D2 100%);
+  margin: 0;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.register-container .link-to a {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+fieldset {
+  border: 1px solid #b2cf43;
+  border-radius: 10px;
+  padding: 16px;
 }
 
 footer {
