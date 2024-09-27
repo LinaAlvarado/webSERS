@@ -640,6 +640,16 @@ a {
   align-items: center;
   width: 100%;
 }
+@media (min-width: 700px) {
+  .register-container {
+    height: auto;
+  }
+}
+@media (min-width: 1400px) {
+  .register-container {
+    height: 100vh;
+  }
+}
 .register-container .link-to a {
   text-decoration: underline;
   font-weight: bolder;
@@ -649,6 +659,21 @@ fieldset {
   border: 1px solid #b2cf43;
   border-radius: 10px;
   padding: 16px;
+}
+@media (min-width: 700px) {
+  fieldset {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: baseline;
+  }
+}
+
+@media (min-width: 700px) {
+  .large-fieldset {
+    display: flex;
+    flex-flow: row wrap;
+  }
 }
 
 footer {
