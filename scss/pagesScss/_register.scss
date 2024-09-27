@@ -18,6 +18,7 @@
     }
 
     @include mixins.respond-to(extra-large){
+      background: var.$gradient-bg ;
       height: 100vh;
     }
     .link-to a{
