@@ -46,8 +46,9 @@
         color: var.$dark-blue;
       }
       
-      .input, select {
+      .input, select, option {
         background-color: var.$lightBeige;
+        color: var.$dark-blue;
       
         &::placeholder {
           font-size: 14px;

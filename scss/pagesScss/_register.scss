@@ -14,7 +14,8 @@
   
 
     @include mixins.respond-to(medium){
-      height: auto;
+      min-height: 100vh;
+      max-height: auto;
     }
 
     @include mixins.respond-to(extra-large){

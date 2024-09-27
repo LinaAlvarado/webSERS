@@ -622,10 +622,11 @@ a {
 .login-form form .label {
   color: #222d5b;
 }
-.login-form form .input, .login-form form select {
+.login-form form .input, .login-form form select, .login-form form option {
   background-color: #FDFAF1;
+  color: #222d5b;
 }
-.login-form form .input::placeholder, .login-form form select::placeholder {
+.login-form form .input::placeholder, .login-form form select::placeholder, .login-form form option::placeholder {
   font-size: 14px;
   color: #979ba7;
 }
@@ -642,7 +643,8 @@ a {
 }
 @media (min-width: 700px) {
   .register-container {
-    height: auto;
+    min-height: 100vh;
+    max-height: auto;
   }
 }
 @media (min-width: 1400px) {
