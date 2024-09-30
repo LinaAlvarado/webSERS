@@ -40,6 +40,10 @@ a {
   color: var.$dark-blue;
 }
 
+.navbar-brand .navbar-item:hover, .navbar-start .navbar-item:hover{
+ background-color: var.$beige;
+ }
+
 //Menu - device phone
 .navbar-burger {
   color: var.$dark-blue;
@@ -119,11 +123,12 @@ a {
   
   @include mixins.respond-to(medium) {
     border-radius: 80px;
-    height: auto;
     margin: 0px 3rem;
+  }
+
+  @include mixins.respond-to(large) {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
   }
   
   @include mixins.respond-to(extra-large) {

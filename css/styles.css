@@ -35,6 +35,10 @@ a {
   color: #222d5b;
 }
 
+.navbar-brand .navbar-item:hover, .navbar-start .navbar-item:hover {
+  background-color: #f2eee3;
+}
+
 .navbar-burger {
   color: #222d5b;
 }
@@ -113,11 +117,13 @@ a {
 @media (min-width: 700px) {
   .service-container {
     border-radius: 80px;
-    height: auto;
     margin: 0px 3rem;
+  }
+}
+@media (min-width: 1000px) {
+  .service-container {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
   }
 }
 @media (min-width: 1400px) {
@@ -634,7 +640,6 @@ a {
 .register-container {
   background: linear-gradient(90deg, #46bcc6 27.83%, #8BD0D2 100%);
   margin: 0;
-  padding: 18px;
   display: flex;
   flex-direction: column;
   justify-content: center;
