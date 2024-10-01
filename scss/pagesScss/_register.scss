@@ -22,17 +22,14 @@
      min-height: 100vh;
      max-height: auto;
     }
-    .link-to a{
-      text-decoration: underline;
-      font-weight: bolder;
-    }
 }
 
-// .register-form{
-//     @extend .login-form;
-//     margin: 0;
-//     padding: 8px;
-// }
+.link-to a{
+  color: var.$dark-blue;
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
 
 fieldset{
     border: 1px solid var.$green;

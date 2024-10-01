@@ -1,6 +1,7 @@
 @use "../abstract/variable" as var;
 @use "../abstract/mixins" as mixins;
 
+
 * {
   margin: 0;
   padding: 0;
@@ -13,12 +14,31 @@
 
 body,
 .navbar,
-.navbar-menu {
+.navbar-menu
+{
+   background-color: #fdfaf1;
+}
+
+.has-dropdown a.navbar-link:hover{
+  background-color: var.$beige;
+}
+
+.navbar-link:not(.is-arrowless):after, .select:not(.is-multiple):not(.is-loading):after{
+  border-color: var.$orange;
+}
+
+.navbar-dropdown, .navbar-dropdown a.item:not(.is-active, .is-selected){
+  color: var.$dark-blue;
   background-color: #fdfaf1;
+}
+
+.navbar-dropdown a.navbar-item:hover{
+background-color: var.$blue;
 }
 
 .button {
   background-color: var.$beige;
+  border: none;
 }
 
 // Button Primary
@@ -36,6 +56,7 @@ body,
 .title,
 .button,
 .navbar-item,
+.has-dropdown
 a {
   color: var.$dark-blue;
 }
@@ -405,7 +426,8 @@ a {
       font-size: 0.9rem;
     }
 
-    a {
+    a.link-contact {
+      color: var.$dark-blue;
       text-decoration: underline;
       font-weight: bolder;
     }
