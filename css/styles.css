@@ -863,25 +863,39 @@ fieldset {
   justify-content: center;
 }
 
-.main-courses {
-  margin: 1rem;
-}
-
 .expandable-card {
-  width: 100%;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f8f8f8;
   overflow: hidden;
+}
+.expandable-card .toggle-card {
+  display: none;
 }
 .expandable-card .expandable-header {
-  cursor: pointer;
-  border-radius: 10px;
+  background-color: rgb(222.5, 222.5, 222.5);
   padding: 16px;
-  background-color: rgba(70, 187, 198, 0.5137254902);
-  border: 2px solid #46bcc6;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.expandable-card .expandable-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+.expandable-card .expandable-header .toggle-text {
+  font-size: 14px;
+  color: #555;
+  transition: color 0.4s ease;
 }
 .expandable-card .expandable-content {
-  height: 0;
+  max-height: 0;
   overflow: hidden;
-  transition: height 5s ease;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  pointer-events: none;
 }
 .expandable-card .expandable-content ul {
   list-style: none;
@@ -890,16 +904,25 @@ fieldset {
 }
 .expandable-card .expandable-content ul li {
   padding: 8px 0;
-  border-bottom: 1px solid #46bcc6;
-}
-.expandable-card .expandable-content ul li:hover {
-  background-color: #FDFAF1;
+  border-bottom: 1px solid #ddd;
 }
 .expandable-card .expandable-content ul li:last-child {
   border-bottom: none;
 }
-.expandable-card:hover .expandable-content {
-  height: auto;
+.expandable-card .toggle-card:checked + .expandable-header .toggle-text {
+  content: "";
+  color: #000;
+}
+.expandable-card .toggle-card:checked + .expandable-header + .expandable-content {
+  max-height: 1000px;
+  opacity: 1;
+  pointer-events: all;
+}
+.expandable-card .toggle-card:checked + .expandable-header .toggle-text::after {
+  content: "Cerrar";
+}
+.expandable-card .expandable-header .toggle-text::after {
+  content: "Abrir";
 }
 
 footer {

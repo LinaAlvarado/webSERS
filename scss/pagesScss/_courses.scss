@@ -2,25 +2,52 @@
 @use "../abstract/variable" as var;
 
 
-.main-courses{
-    margin: 1rem;
-}
+// Variables
+$transition-duration: 0.4s;
+$card-background: #f8f8f8;
+$card-border-color: #ddd;
+$max-height-expanded: 1000px; 
+
 
 .expandable-card {
-  width: 100%;
+  width: 300px;
+  border: 1px solid $card-border-color;
+  border-radius: 8px;
+  background-color: $card-background;
   overflow: hidden;
 
+
+  .toggle-card {
+    display: none;
+  }
+
   .expandable-header {
-    cursor: pointer;
-    border-radius: 10px;
+    background-color: darken($card-background, 10%);
     padding: 16px;
-    @include mixins.card-style(var.$lightBlue, var.$blue);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    
+    .toggle-text {
+      font-size: 14px;
+      color: #555;
+      transition: color $transition-duration ease;
+    }
   }
 
   .expandable-content {
-    height: 0; 
+    max-height: 0; 
     overflow: hidden;
-    transition: height 5s ease; 
+    opacity: 0;
+    transition: max-height $transition-duration ease, opacity $transition-duration ease;
+    pointer-events: none;
 
     ul {
       list-style: none;
@@ -29,11 +56,8 @@
 
       li {
         padding: 8px 0;
-        border-bottom: 1px solid var.$blue;
-        
-        &:hover{
-            background-color: var.$lightBeige;
-        }
+        border-bottom: 1px solid $card-border-color;
+
         &:last-child {
           border-bottom: none;
         }
@@ -42,7 +66,26 @@
   }
 
   
-  &:hover .expandable-content {
-    height: auto; 
+  .toggle-card:checked + .expandable-header {
+    .toggle-text {
+      content: ""; 
+      color: #000;
+    }
+  }
+
+  .toggle-card:checked + .expandable-header + .expandable-content {
+    max-height: $max-height-expanded;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+ 
+  .toggle-card:checked + .expandable-header .toggle-text::after {
+    content: "Cerrar"; 
+  }
+
+
+  .expandable-header .toggle-text::after {
+    content: "Abrir";
   }
 }
