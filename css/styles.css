@@ -717,12 +717,6 @@ fieldset {
     margin: 3rem;
   }
 }
-@media (min-width: 1400px) {
-  .section-container {
-    width: 1500px;
-    margin: 3rem auto;
-  }
-}
 
 @media (min-width: 1000px) {
   .article-container {

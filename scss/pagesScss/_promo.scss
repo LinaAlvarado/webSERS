@@ -15,11 +15,6 @@
     @include mixins.respond-to(large){
         margin: 3rem;
     }
-
-    @include mixins.respond-to(extra-large){
-        width: 1500px;
-        margin: 3rem auto;
-    }
 }
 
 .article-container{
