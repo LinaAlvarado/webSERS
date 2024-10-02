@@ -865,6 +865,12 @@ fieldset {
 
 .main-courses {
   margin: 3rem 1rem;
+  min-height: 80vh;
+}
+@media (min-width: 700px) {
+  .main-courses {
+    margin: 3rem;
+  }
 }
 
 .expandable-card {
@@ -885,8 +891,7 @@ fieldset {
   justify-content: space-between;
   align-items: center;
 }
-.expandable-card .expandable-header h2 {
-  margin: 0;
+.expandable-card .expandable-header h3 {
   font-size: 18px;
 }
 .expandable-card .expandable-header .toggle-text {

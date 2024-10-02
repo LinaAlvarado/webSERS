@@ -1,7 +1,6 @@
 @use "../abstract/mixins" as mixins;
 @use "../abstract/variable" as var;
 
-
 // Variables
 $transition-duration: 0.4s;
 $text-color: #555;
@@ -9,9 +8,13 @@ $header-text-size: 18px;
 $sub-text-size: 14px;
 $padding-standard: 16px;
 
+.main-courses {
+  margin: 3rem 1rem;
+  min-height: 80vh;
 
-.main-courses{
-    margin: 3rem 1rem;
+  @include mixins.respond-to(medium) {
+    margin: 3rem;
+  }
 }
 
 // Mixin para transiciones
@@ -25,13 +28,11 @@ $padding-standard: 16px;
   border: 1px solid var.$yellow;
   border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 16px; 
-
+  margin-bottom: 16px;
 
   .toggle-card {
     display: none;
   }
-
 
   .expandable-header {
     background-color: var.$lightYellow;
@@ -41,8 +42,7 @@ $padding-standard: 16px;
     justify-content: space-between;
     align-items: center;
 
-    h2 {
-      margin: 0;
+    h3 {
       font-size: $header-text-size;
     }
 
@@ -54,7 +54,7 @@ $padding-standard: 16px;
   }
 
   .expandable-content {
-    height: 0; 
+    height: 0;
     overflow: hidden;
     opacity: 0;
     pointer-events: none;
