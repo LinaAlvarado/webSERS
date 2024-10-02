@@ -6,7 +6,7 @@
 }
 
 .section-container {
-    margin: 2rem 1rem;
+    margin: 3rem 1rem;
 
     .text-content {
         margin-bottom: 2rem;
@@ -95,6 +95,8 @@
 .container-create-pack{
     @include mixins.respond-to(medium){
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 }
@@ -122,6 +124,9 @@
    
 }
 
-//  .img-mg{
-//      margin:  10px auto;
-//  }
+ .img-mg{
+    @include mixins.respond-to(medium){
+    
+    margin: 10px;
+    }
+  }

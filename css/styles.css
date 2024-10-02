@@ -707,7 +707,7 @@ fieldset {
 }
 
 .section-container {
-  margin: 2rem 1rem;
+  margin: 3rem 1rem;
 }
 .section-container .text-content {
   margin-bottom: 2rem;
@@ -782,6 +782,8 @@ fieldset {
 @media (min-width: 700px) {
   .container-create-pack {
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -799,6 +801,12 @@ fieldset {
     flex-direction: row;
     justify-content: space-between;
     gap: 10px;
+  }
+}
+
+@media (min-width: 700px) {
+  .img-mg {
+    margin: 10px;
   }
 }
 
