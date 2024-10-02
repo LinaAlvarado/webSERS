@@ -75,6 +75,28 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+
+   @include mixins.respond-to(medium){
+    flex-direction: row;
+    justify-content: space-between;
+
+    p{
+        width: 60%;
+    }
+
+    a{
+        width: 40%;
+    }
+   }
+
+}
+
+.container-create-pack{
+    @include mixins.respond-to(medium){
+        display: flex;
+    }
+
 }
 
 .item-pack{
@@ -86,8 +108,20 @@
 }
 
 .container-p{
-
     p{
         @extend .item-pack
     }
+
+    @include mixins.respond-to(medium){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px
+    }
+
+   
 }
+
+//  .img-mg{
+//      margin:  10px auto;
+//  }
