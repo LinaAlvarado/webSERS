@@ -11,8 +11,26 @@
     .text-content {
         margin-bottom: 2rem;
     }
+
+    @include mixins.respond-to(large){
+        margin: 3rem;
+    }
+
+    @include mixins.respond-to(extra-large){
+        width: 1500px;
+        margin: 3rem auto;
+    }
 }
 
+.article-container{
+    @include mixins.respond-to(large){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+}
 .container-packs {
     display: flex;
     flex-direction: column;
@@ -56,6 +74,10 @@
         h4 {
             background-color: var.$orange;
         }
+
+        &:hover{
+            box-shadow: 2px 2px 9.1px 0px rgba(236, 100, 40, 0.50);
+        }
     }
 
 
@@ -64,6 +86,20 @@
 
         h4 {
             background-color: var.$blue;
+        }
+        
+        &:hover{
+            box-shadow: 2px 2px 9.1px 0px rgba(70, 188, 198, 0.36);
+        }
+    }
+
+    @include mixins.respond-to(large){
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+
+        .card-pack{
+            width: 500px;
         }
     }
 }
@@ -90,6 +126,9 @@
     }
    }
 
+   @include mixins.respond-to(large){
+   width: 1020px;
+   }
 }
 
 .container-create-pack{
@@ -99,6 +138,13 @@
         align-items: center;
     }
 
+}
+
+.content{
+    @include mixins.respond-to(large){
+        width: 50%;
+    }
+    
 }
 
 .item-pack{
@@ -126,7 +172,15 @@
 
  .img-mg{
     @include mixins.respond-to(medium){
-    
     margin: 10px;
     }
+
+    @include mixins.respond-to(large){
+       width: 60%;
+        }
+  }
+
+  .lo{
+    display: flex;
+    justify-content:center ;
   }
