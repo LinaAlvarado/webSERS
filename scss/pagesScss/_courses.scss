@@ -1,0 +1,48 @@
+@use "../abstract/mixins" as mixins;
+@use "../abstract/variable" as var;
+
+
+.main-courses{
+    margin: 1rem;
+}
+
+.expandable-card {
+  width: 100%;
+  overflow: hidden;
+
+  .expandable-header {
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 16px;
+    @include mixins.card-style(var.$lightBlue, var.$blue);
+  }
+
+  .expandable-content {
+    height: 0; 
+    overflow: hidden;
+    transition: height 5s ease; 
+
+    ul {
+      list-style: none;
+      padding: 16px;
+      margin: 0;
+
+      li {
+        padding: 8px 0;
+        border-bottom: 1px solid var.$blue;
+        
+        &:hover{
+            background-color: var.$lightBeige;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  
+  &:hover .expandable-content {
+    height: auto; 
+  }
+}

@@ -709,13 +709,14 @@ fieldset {
 .section-container {
   margin: 3rem 1rem;
 }
-.section-container .text-content {
-  margin-bottom: 2rem;
-}
 @media (min-width: 1000px) {
   .section-container {
     margin: 3rem;
   }
+}
+
+.text-content {
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 1000px) {
@@ -860,6 +861,45 @@ fieldset {
 .lo {
   display: flex;
   justify-content: center;
+}
+
+.main-courses {
+  margin: 1rem;
+}
+
+.expandable-card {
+  width: 100%;
+  overflow: hidden;
+}
+.expandable-card .expandable-header {
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 16px;
+  background-color: rgba(70, 187, 198, 0.5137254902);
+  border: 2px solid #46bcc6;
+}
+.expandable-card .expandable-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 5s ease;
+}
+.expandable-card .expandable-content ul {
+  list-style: none;
+  padding: 16px;
+  margin: 0;
+}
+.expandable-card .expandable-content ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #46bcc6;
+}
+.expandable-card .expandable-content ul li:hover {
+  background-color: #FDFAF1;
+}
+.expandable-card .expandable-content ul li:last-child {
+  border-bottom: none;
+}
+.expandable-card:hover .expandable-content {
+  height: auto;
 }
 
 footer {
