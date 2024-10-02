@@ -863,18 +863,22 @@ fieldset {
   justify-content: center;
 }
 
+.main-courses {
+  margin: 3rem 1rem;
+}
+
 .expandable-card {
-  width: 300px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f8f8f8;
+  width: 100%;
+  border: 1px solid #fdc41b;
+  border-radius: 10px;
   overflow: hidden;
+  margin-bottom: 16px;
 }
 .expandable-card .toggle-card {
   display: none;
 }
 .expandable-card .expandable-header {
-  background-color: rgb(222.5, 222.5, 222.5);
+  background-color: rgba(253, 196, 27, 0.0941176471);
   padding: 16px;
   cursor: pointer;
   display: flex;
@@ -891,11 +895,11 @@ fieldset {
   transition: color 0.4s ease;
 }
 .expandable-card .expandable-content {
-  max-height: 0;
+  height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: max-height 0.4s ease, opacity 0.4s ease;
   pointer-events: none;
+  transition: height 0.4s ease;
 }
 .expandable-card .expandable-content ul {
   list-style: none;
@@ -904,22 +908,18 @@ fieldset {
 }
 .expandable-card .expandable-content ul li {
   padding: 8px 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgba(253, 196, 27, 0.4117647059);
 }
 .expandable-card .expandable-content ul li:last-child {
   border-bottom: none;
 }
-.expandable-card .toggle-card:checked + .expandable-header .toggle-text {
-  content: "";
-  color: #000;
-}
-.expandable-card .toggle-card:checked + .expandable-header + .expandable-content {
-  max-height: 1000px;
-  opacity: 1;
-  pointer-events: all;
-}
 .expandable-card .toggle-card:checked + .expandable-header .toggle-text::after {
   content: "Cerrar";
+}
+.expandable-card .toggle-card:checked + .expandable-header + .expandable-content {
+  height: auto;
+  opacity: 1;
+  pointer-events: all;
 }
 .expandable-card .expandable-header .toggle-text::after {
   content: "Abrir";

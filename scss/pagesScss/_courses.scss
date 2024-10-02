@@ -4,26 +4,38 @@
 
 // Variables
 $transition-duration: 0.4s;
-$card-background: #f8f8f8;
-$card-border-color: #ddd;
-$max-height-expanded: 1000px; 
+$text-color: #555;
+$header-text-size: 18px;
+$sub-text-size: 14px;
+$padding-standard: 16px;
 
 
+.main-courses{
+    margin: 3rem 1rem;
+}
+
+// Mixin para transiciones
+@mixin transition($property) {
+  transition: $property $transition-duration ease;
+}
+
+// Estilo de la tarjeta
 .expandable-card {
-  width: 300px;
-  border: 1px solid $card-border-color;
-  border-radius: 8px;
-  background-color: $card-background;
+  width: 100%;
+  border: 1px solid var.$yellow;
+  border-radius: 10px;
   overflow: hidden;
+  margin-bottom: 16px; 
 
 
   .toggle-card {
     display: none;
   }
 
+
   .expandable-header {
-    background-color: darken($card-background, 10%);
-    padding: 16px;
+    background-color: var.$lightYellow;
+    padding: $padding-standard;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -31,32 +43,31 @@ $max-height-expanded: 1000px;
 
     h2 {
       margin: 0;
-      font-size: 18px;
+      font-size: $header-text-size;
     }
 
-    
     .toggle-text {
-      font-size: 14px;
-      color: #555;
-      transition: color $transition-duration ease;
+      font-size: $sub-text-size;
+      color: $text-color;
+      @include transition(color);
     }
   }
 
   .expandable-content {
-    max-height: 0; 
+    height: 0; 
     overflow: hidden;
     opacity: 0;
-    transition: max-height $transition-duration ease, opacity $transition-duration ease;
     pointer-events: none;
+    @include transition(height);
 
     ul {
       list-style: none;
-      padding: 16px;
+      padding: $padding-standard;
       margin: 0;
 
       li {
         padding: 8px 0;
-        border-bottom: 1px solid $card-border-color;
+        border-bottom: 1px solid var.$mediumYellow;
 
         &:last-child {
           border-bottom: none;
@@ -65,25 +76,17 @@ $max-height-expanded: 1000px;
     }
   }
 
-  
-  .toggle-card:checked + .expandable-header {
-    .toggle-text {
-      content: ""; 
-      color: #000;
+  .toggle-card:checked {
+    + .expandable-header .toggle-text::after {
+      content: "Cerrar";
+    }
+
+    + .expandable-header + .expandable-content {
+      height: auto;
+      opacity: 1;
+      pointer-events: all;
     }
   }
-
-  .toggle-card:checked + .expandable-header + .expandable-content {
-    max-height: $max-height-expanded;
-    opacity: 1;
-    pointer-events: all;
-  }
-
- 
-  .toggle-card:checked + .expandable-header .toggle-text::after {
-    content: "Cerrar"; 
-  }
-
 
   .expandable-header .toggle-text::after {
     content: "Abrir";
