@@ -1,8 +1,86 @@
-.rectangle{
-    border: 1px solid red;
-    margin: 1rem 3rem;
+@use "../abstract/mixins" as mixins;
+@use "../abstract/variable" as var;
+
+.bolder {
+    font-weight: bolder;
 }
 
-.text-content{
-    border: 1px solid rgb(0, 0, 0);
+.section-container {
+    margin: 2rem 1rem;
+
+    .text-content {
+        margin-bottom: 2rem;
+    }
+}
+
+.container-packs {
+    display: flex;
+    flex-direction: column;
+
+    .card-pack {
+        padding: 2rem 1rem;
+        border-radius: 10px;
+        position: relative;
+        margin-bottom: 2rem;
+
+        h4 {
+            padding: 10px;
+            border-radius: 16px;
+            color: var.$beige;
+            font-weight: bolder;
+            position: absolute;
+            top: -20px;
+        }
+
+        .container-item-card {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 10px;
+
+            img {
+                width: 70px;
+            }
+        }
+    }
+
+  
+    .card-pack:nth-child(1) {
+        @include mixins.card-style(var.$lightOrange, var.$orange);
+
+        h4 {
+            background-color: var.$orange;
+        }
+    }
+
+
+    .card-pack:nth-child(2) {
+        @include mixins.card-style(var.$ultraLightBlue, var.$blue);
+
+        h4 {
+            background-color: var.$blue;
+        }
+    }
+}
+
+.container-contact{
+    background-color: var.$lightGreen;
+    border-radius: 10px;
+    padding: 16px;
+    
+}
+
+.item-pack{
+    padding: 10px;
+    border-radius: 10px;
+    margin: 16px 0px;
+    @include mixins.card-style(var.$lightYellow, var.$mediumYellow);
+ 
+}
+
+.container-p{
+
+    p{
+        @extend .item-pack
+    }
 }
