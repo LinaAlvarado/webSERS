@@ -723,6 +723,9 @@ fieldset {
   position: relative;
   margin-bottom: 2rem;
 }
+.container-packs .card-pack span:first-of-type {
+  margin-right: 5px;
+}
 .container-packs .card-pack h4 {
   padding: 10px;
   border-radius: 16px;
@@ -759,6 +762,9 @@ fieldset {
   background-color: rgba(179, 207, 67, 0.2196078431);
   border-radius: 10px;
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .item-pack, .container-p p {
