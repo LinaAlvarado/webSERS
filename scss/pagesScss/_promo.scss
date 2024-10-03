@@ -1,3 +1,4 @@
+
 @use "../abstract/mixins" as mixins;
 @use "../abstract/variable" as var;
 
@@ -51,7 +52,6 @@
     h4 {
       padding: 10px;
       border-radius: 16px;
-      color: var.$beige;
       font-weight: bolder;
       position: absolute;
       top: -20px;
@@ -70,27 +70,11 @@
   }
 
   .card-pack:nth-child(1) {
-    @include mixins.card-style(var.$lightOrange, var.$orange);
-
-    h4 {
-      background-color: var.$orange;
-    }
-
-    &:hover {
-      box-shadow: 2px 2px 9.1px 0px rgba(236, 100, 40, 0.5);
-    }
+    @include mixins.card-item-style(var.$lightOrange, var.$orange, rgba(236, 100, 40, 0.5), var.$beige,var.$orange);
   }
 
   .card-pack:nth-child(2) {
-    @include mixins.card-style(var.$ultraLightBlue, var.$blue);
-
-    h4 {
-      background-color: var.$blue;
-    }
-
-    &:hover {
-      box-shadow: 2px 2px 9.1px 0px rgba(70, 188, 198, 0.36);
-    }
+    @include mixins.card-item-style(var.$ultraLightBlue, var.$blue, rgba(70, 188, 198, 0.36),var.$beige, var.$blue);
   }
 
   @include mixins.respond-to(large) {

@@ -1,0 +1,59 @@
+@use "../abstract/mixins" as mixins;
+@use "../abstract/variable" as var;
+
+.service-p{
+    display: flex;
+    gap: 10px;
+    font-weight: bolder;
+}
+
+.plan-container p{
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+
+.cards-pack-service{
+    @extend .container-packs;
+
+    .card-pack:nth-child(1) {
+        @include mixins.card-item-style(var.$ultraLightGreen, var.$green, var.$green, var.$dark-blue, var.$green);
+      }
+    
+      .card-pack:nth-child(2) {
+        @include mixins.card-item-style(var.$lightYellow, var.$yellow, var.$yellow, var.$dark-blue, var.$yellow);
+      }
+}
+
+.plan-containers{
+  .plan-container{
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 1rem;
+  }
+}
+
+.accountant-service{
+ 
+.plan-container:nth-child(1){
+  @include mixins.card-style(var.$ultraLightGreen, var.$green)
+}
+
+.plan-container:nth-child(2){
+  @include mixins.card-style(var.$lightGreen, var.$green)
+}
+}
+
+.legal-service{
+ 
+  .plan-container:nth-child(1){
+    @include mixins.card-style(transparent, var.$yellow)
+  }
+  
+  .plan-container:nth-child(2){
+    @include mixins.card-style(var.$lightYellow, var.$yellow)
+  }
+
+  .plan-container:nth-child(3){
+    @include mixins.card-style(var.$mediumYellow, var.$yellow)
+  }
+  }

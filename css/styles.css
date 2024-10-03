@@ -735,63 +735,64 @@ fieldset {
   }
 }
 
-.container-packs {
+.container-packs, .cards-pack-service {
   display: flex;
   flex-direction: column;
 }
-.container-packs .card-pack {
+.container-packs .card-pack, .cards-pack-service .card-pack {
   padding: 2rem 1rem;
   border-radius: 10px;
   position: relative;
   margin-bottom: 2rem;
 }
-.container-packs .card-pack span:first-of-type {
+.container-packs .card-pack span:first-of-type, .cards-pack-service .card-pack span:first-of-type {
   margin-right: 5px;
 }
-.container-packs .card-pack h4 {
+.container-packs .card-pack h4, .cards-pack-service .card-pack h4 {
   padding: 10px;
   border-radius: 16px;
-  color: #f2eee3;
   font-weight: bolder;
   position: absolute;
   top: -20px;
 }
-.container-packs .card-pack .container-item-card {
+.container-packs .card-pack .container-item-card, .cards-pack-service .card-pack .container-item-card {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 10px;
 }
-.container-packs .card-pack .container-item-card img {
+.container-packs .card-pack .container-item-card img, .cards-pack-service .card-pack .container-item-card img {
   width: 70px;
 }
-.container-packs .card-pack:nth-child(1) {
-  background-color: #f7ece1;
+.container-packs .card-pack:nth-child(1), .cards-pack-service .card-pack:nth-child(1) {
   border: 2px solid #ec6428;
+  background-color: #f7ece1;
 }
-.container-packs .card-pack:nth-child(1) h4 {
+.container-packs .card-pack:nth-child(1) h4, .cards-pack-service .card-pack:nth-child(1) h4 {
+  color: #f2eee3;
   background-color: #ec6428;
 }
-.container-packs .card-pack:nth-child(1):hover {
+.container-packs .card-pack:nth-child(1):hover, .cards-pack-service .card-pack:nth-child(1):hover {
   box-shadow: 2px 2px 9.1px 0px rgba(236, 100, 40, 0.5);
 }
-.container-packs .card-pack:nth-child(2) {
-  background-color: rgba(87, 195, 205, 0.168627451);
+.container-packs .card-pack:nth-child(2), .cards-pack-service .card-pack:nth-child(2) {
   border: 2px solid #46bcc6;
+  background-color: rgba(87, 195, 205, 0.168627451);
 }
-.container-packs .card-pack:nth-child(2) h4 {
+.container-packs .card-pack:nth-child(2) h4, .cards-pack-service .card-pack:nth-child(2) h4 {
+  color: #f2eee3;
   background-color: #46bcc6;
 }
-.container-packs .card-pack:nth-child(2):hover {
+.container-packs .card-pack:nth-child(2):hover, .cards-pack-service .card-pack:nth-child(2):hover {
   box-shadow: 2px 2px 9.1px 0px rgba(70, 188, 198, 0.36);
 }
 @media (min-width: 1000px) {
-  .container-packs {
+  .container-packs, .cards-pack-service {
     flex-direction: row;
     justify-content: center;
     gap: 20px;
   }
-  .container-packs .card-pack {
+  .container-packs .card-pack, .cards-pack-service .card-pack {
     width: 50%;
   }
 }
@@ -946,6 +947,68 @@ fieldset {
 }
 .expandable-card .expandable-header .toggle-text::after {
   content: "Abrir";
+}
+
+.service-p {
+  display: flex;
+  gap: 10px;
+  font-weight: bolder;
+}
+
+.plan-container p {
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+
+.cards-pack-service .card-pack:nth-child(1) {
+  border: 2px solid #b2cf43;
+  background-color: rgba(221, 239, 148, 0.2196078431);
+}
+.cards-pack-service .card-pack:nth-child(1) h4 {
+  color: #222d5b;
+  background-color: #b2cf43;
+}
+.cards-pack-service .card-pack:nth-child(1):hover {
+  box-shadow: 2px 2px 9.1px 0px #b2cf43;
+}
+.cards-pack-service .card-pack:nth-child(2) {
+  border: 2px solid #fdc41b;
+  background-color: rgba(253, 196, 27, 0.0941176471);
+}
+.cards-pack-service .card-pack:nth-child(2) h4 {
+  color: #222d5b;
+  background-color: #fdc41b;
+}
+.cards-pack-service .card-pack:nth-child(2):hover {
+  box-shadow: 2px 2px 9.1px 0px #fdc41b;
+}
+
+.plan-containers .plan-container {
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+
+.accountant-service .plan-container:nth-child(1) {
+  background-color: rgba(221, 239, 148, 0.2196078431);
+  border: 2px solid #b2cf43;
+}
+.accountant-service .plan-container:nth-child(2) {
+  background-color: rgba(179, 207, 67, 0.2196078431);
+  border: 2px solid #b2cf43;
+}
+
+.legal-service .plan-container:nth-child(1) {
+  background-color: transparent;
+  border: 2px solid #fdc41b;
+}
+.legal-service .plan-container:nth-child(2) {
+  background-color: rgba(253, 196, 27, 0.0941176471);
+  border: 2px solid #fdc41b;
+}
+.legal-service .plan-container:nth-child(3) {
+  background-color: rgba(253, 196, 27, 0.4117647059);
+  border: 2px solid #fdc41b;
 }
 
 footer {
