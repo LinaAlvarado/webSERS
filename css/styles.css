@@ -714,6 +714,12 @@ fieldset {
     margin: 3rem;
   }
 }
+@media (min-width: 1400px) {
+  .section-container {
+    width: 70%;
+    margin: 3rem auto;
+  }
+}
 
 .text-content {
   margin-bottom: 2rem;
@@ -786,7 +792,7 @@ fieldset {
     gap: 20px;
   }
   .container-packs .card-pack {
-    width: 500px;
+    width: 50%;
   }
 }
 
@@ -794,6 +800,7 @@ fieldset {
   background-color: rgba(179, 207, 67, 0.2196078431);
   border-radius: 10px;
   padding: 16px;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -812,15 +819,21 @@ fieldset {
 }
 @media (min-width: 1000px) {
   .container-contact {
-    width: 1020px;
+    width: 100%;
+  }
+}
+@media (min-width: 1400px) {
+  .container-contact {
+    width: 100%;
   }
 }
 
 @media (min-width: 700px) {
   .container-create-pack {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    gap: 1rem;
   }
 }
 
@@ -847,20 +860,25 @@ fieldset {
   }
 }
 
+.container-img {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 @media (min-width: 700px) {
-  .img-mg {
-    margin: 10px;
+  .container-img {
+    width: 80%;
   }
 }
 @media (min-width: 1000px) {
-  .img-mg {
-    width: 60%;
+  .container-img {
+    width: 40%;
   }
 }
-
-.lo {
-  display: flex;
-  justify-content: center;
+.container-img .img-mg {
+  border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .main-courses {
