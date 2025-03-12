@@ -962,23 +962,18 @@ fieldset {
   grid-template-rows: auto;
   gap: 30px;
   width: 90%;
-  margin: 0 auto;
+  margin: 7rem auto;
 }
 
 .card {
   width: 250px;
-  height: 300px;
+  height: 350px;
   position: relative;
   left: 51%;
   transform: translateX(-50%);
 }
 .card h6 {
   font-size: 18px;
-}
-
-.card-txt {
-  position: absolute;
-  bottom: 15px;
 }
 
 .bg-color {
