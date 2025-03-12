@@ -94,14 +94,14 @@ $padding-standard: 16px;
 }
 
   // cursos disponibles
-  .cards-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
-    grid-template-rows: auto;
-    gap: 30px;
-    width: 90%;
-    margin: 0 auto;
-  }
+   .cards-course-container{
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+     grid-template-rows: auto;
+     gap: 30px;
+     width: 90%;
+     margin: 0 auto;
+   }
 
   .card {
     width: 250px; 

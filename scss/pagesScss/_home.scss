@@ -12,6 +12,13 @@
    overflow-x: hidden;
  }
 
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+ box-shadow: 0px -1px 10.8px 0px rgba(27, 27, 27, 0.07);
+ }
+
 body,
 .navbar,
 .navbar-menu
@@ -205,7 +212,7 @@ a {
   position: relative;
 
   @include mixins.respond-to(large){
-    margin: 3rem;
+    margin: 5rem;
     border-radius: 10px;
   }
 
@@ -339,7 +346,7 @@ a {
   padding: 16px;
 
   @include mixins.respond-to(large){
-    margin: 3rem;
+    margin: 5rem;
     padding: 2rem;
     border-radius: 10px
   }
@@ -476,7 +483,7 @@ a {
    }
 
    @include mixins.respond-to(large) {
- margin: 3rem 8rem;
+ margin: 8rem 8rem;
   
    }
 
